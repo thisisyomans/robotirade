@@ -19,18 +19,18 @@ arrow = pygame.image.load('resources/images/bullet.png')
 
 while 1:
     screen.fill(0)
-    for x in range(width//grass.get_width()+1):
-        for y in range(height//grass.get_height()+1):
-            screen.blit(grass,(x*100,y*100))
+    for x in range(width//grass.get_width() + 1):
+        for y in range(height//grass.get_height() + 1):
+            screen.blit(grass,(x * 100, y * 100))
     screen.blit(castle,(0,30))
     screen.blit(castle,(0,135))
     screen.blit(castle,(0,240))
     screen.blit(castle,(0,345))
 	
     position = pygame.mouse.get_pos()
-    angle = math.atan2(position[1]-(playerpos[1]+32),position[0]-(playerpos[0]+26))
-    playerrot = pygame.transform.rotate(player, 360-angle*(360/(2*pi)))
-    playerpos1 = (playerpos[0]-playerrot.get_rect().width/2, playerpos[1]-playerrot.get_rect().height/2)
+    angle = math.atan2(position[1] - (playerpos[1] + 32), position[0] - (playerpos[0] + 26))
+    playerrot = pygame.transform.rotate(player, 360-angle * (360 / (2 * pi)))
+    playerpos1 = (playerpos[0] - playerrot.get_rect().width / 2, playerpos[1] - playerrot.get_rect().height / 2)
     screen.blit(playerrot, playerpos1)
 
     for bullet in arrows:
@@ -49,7 +49,7 @@ while 1:
     pygame.display.flip()
 	
     for event in pygame.event.get():
-        if event.type==pygame.QUIT:
+        if event.type == pygame.QUIT:
             pygame.quit()			
             exit(0)
 	    
@@ -82,10 +82,10 @@ while 1:
             arrows.append([math.atan2(position[1] - (playerpos1[1] + 32), position[0] - (playerpos1[0] + 26)), playerpos1[0] + 32, playerpos1[1] + 32])
 
     if keys[0]:
-        playerpos[1]-=5
+        playerpos[1] -= 5
     elif keys[2]:
-        playerpos[1]+=5
+        playerpos[1] += 5
     if keys[1]:
-        playerpos[0]-=5
+        playerpos[0] -= 5
     elif keys[3]:
-        playerpos[0]+=5
+        playerpos[0] += 5
