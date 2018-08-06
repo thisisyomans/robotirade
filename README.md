@@ -85,7 +85,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone whose code was used
 * Inspiration
 * etc
-
-=======
-
->>>>>>> a90ebfbfc7f362a7fd68d826c56a149a8966a3ff
