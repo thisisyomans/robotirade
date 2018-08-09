@@ -14,7 +14,7 @@ acc = [0, 0]
 arrows = []
 badtimer = 100
 badtimer1 = 0
-badguys = [[640, 100]]
+badguys = [[-64, 100]]
 healthvalue = 194
 
 player = pygame.image.load('resources/images/dude.png')
@@ -22,7 +22,7 @@ grass = pygame.image.load('resources/images/grass.png')
 castle = pygame.image.load('resources/images/castle.png')
 arrow = pygame.image.load('resources/images/bullet.png')
 badguyimg1 = pygame.image.load('resources/images/badguy.png')
-badguyimg = badguyimg1
+badguyimg = pygame.transform.flip(badguyimg1, True, False)
 
 while 1:
     badtimer -= 1
@@ -31,10 +31,10 @@ while 1:
     for x in range(width//grass.get_width() + 1):
         for y in range(height//grass.get_height() + 1):
             screen.blit(grass,(x * 100, y * 100))
-    screen.blit(castle,(0, 30))
-    screen.blit(castle,(0, 135))
-    screen.blit(castle,(0, 240))
-    screen.blit(castle,(0, 345))
+    screen.blit(pygame.transform.flip(castle, True, False), (531, 30))
+    screen.blit(pygame.transform.flip(castle, True, False), (531, 135))
+    screen.blit(pygame.transform.flip(castle, True, False), (531, 240))
+    screen.blit(pygame.transform.flip(castle, True, False), (531, 345))
 	
     position = pygame.mouse.get_pos()
     angle = math.atan2(position[1] - (playerpos[1] + 32), position[0] - (playerpos[0] + 26))
@@ -56,7 +56,7 @@ while 1:
             screen.blit(arrow1, (projectile[1], projectile[2]))
 
     if badtimer == 0:
-        badguys.append([640, random.randint(50, 430)])
+        badguys.append([-64, random.randint(50, 430)])
         badtimer = 100 - (badtimer1 * 2)
         if badtimer1 >= 35:
             badtimer1 = 35
@@ -64,9 +64,9 @@ while 1:
             badtimer1 += 5
     index = 0
     for badguy in badguys:
-        if badguy[0] < -64:
+        if badguy[0] > 640:
             badguys.pop(index)
-        badguy[0] -= 7
+        badguy[0] += 7
         index += 1
     for badguy in badguys:
         screen.blit(badguyimg, badguy)
