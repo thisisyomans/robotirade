@@ -7,9 +7,9 @@ pygame.init()
 width, height = 640, 480
 screen = pygame.display.set_mode((width, height))
 keys = [False, False, False, False]
-playerpos = [300,240]
+playerpos = [300, 240]
 pi = math.pi
-acc = [0,0]
+acc = [0, 0]
 arrows = []
 
 player = pygame.image.load('resources/images/dude.png')
@@ -22,10 +22,10 @@ while 1:
     for x in range(width//grass.get_width() + 1):
         for y in range(height//grass.get_height() + 1):
             screen.blit(grass,(x * 100, y * 100))
-    screen.blit(castle,(0,30))
-    screen.blit(castle,(0,135))
-    screen.blit(castle,(0,240))
-    screen.blit(castle,(0,345))
+    screen.blit(castle,(0, 30))
+    screen.blit(castle,(0, 135))
+    screen.blit(castle,(0, 240))
+    screen.blit(castle,(0, 345))
 	
     position = pygame.mouse.get_pos()
     angle = math.atan2(position[1] - (playerpos[1] + 32), position[0] - (playerpos[0] + 26))
@@ -43,7 +43,7 @@ while 1:
             arrows.pop(index)
         index += 1
         for projectile in arrows:
-            arrow1 = pygame.transform.rotate(arrow, 360-projectile[0] * 57.29)
+            arrow1 = pygame.transform.rotate(arrow, 360 - projectile[0] * 57.29)
             screen.blit(arrow1, (projectile[1], projectile[2]))
 
     pygame.display.flip()
