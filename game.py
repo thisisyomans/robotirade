@@ -67,6 +67,12 @@ while 1:
         if badguy[0] > 640:
             badguys.pop(index)
         badguy[0] += 7
+        badrect = pygame.Rect(badguyimg.get_rect())
+        badrect.top = badguy[1]
+        badrect.right = badguy[0]
+        if badrect.right > 531:
+            healthvalue -= random.randint(5, 20)
+            badguys.pop(index)
         index += 1
     for badguy in badguys:
         screen.blit(badguyimg, badguy)
