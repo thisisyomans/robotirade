@@ -102,12 +102,14 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-.game.py.un~ 
-.game.py.swp 
-game.py~ 
-README.md~ 
-README.md~~ 
-.README.md.un~ 
-.README.md~.un~ 
-.README.md~~.un~ 
-README.md~~~ 
+.game.py.un~
+.game.py.swp
+game.py~
+README.md~
+README.md~~
+.README.md.un~
+.README.md~.un~
+.README.md~~.un~
+README.md~~~
+.DS_Store
+resources/.DS_Store
