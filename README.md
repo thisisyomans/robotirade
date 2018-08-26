@@ -68,7 +68,7 @@ We are currently not accepting contributions.
 
 ## Versioning
 
-We use [Git](https://git-scm.com/) for versioning.
+We use [Git](https://git-scm.com/) and [Github](https://github.com) for versioning.
 
 ## Authors
 
