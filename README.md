@@ -13,8 +13,15 @@ What things you need to install the software and how to install them
 Coming soon!
 
 ```
-Python 3 (Python is a programming language, and this game is written in version 3) - Can be downloaded from its official website (https://www.python.org/)
+Python 3
 ```
+```
+Python is a programming language, and this game is written in version 3
+```
+```
+It can be downloaded from its official website (listed below)
+```
+[Python 3](https://www.python.org/downloads/
 
 ### Installing
 
