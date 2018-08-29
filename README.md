@@ -36,7 +36,7 @@ Steps:
     b. If your Python 3 download's environment variable on your machine is python, type the following into your terminal:
       pip install pygame
 ```
-* [Python 3](https://www.python.org/downloads/)
+* [Pygame](www.pygame.org)
 * [Installing pip](https://pip.pypa.io/en/stable/installing/)
 
 ### Installing
