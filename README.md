@@ -24,6 +24,21 @@ Python 3 (Python is a programming language, and this game is written in version 
 ```
 * [Python 3](https://www.python.org/downloads/)
 
+```
+Pygame is a python library meant for game development.<br />
+Note: the following steps will add the Pygame module to your project directory, not your globally on your machine.<br />
+Steps:<br />
+  1. We're assuming you have pip, as the up to date versions of Python 2 and 3 come with pip, if you don't, a link to the pip website that has instructions will be listed below.<br />
+  2. Navigate to your project directory through the command line.<br />
+  3. Once you are in your project directory, do one of the following:<br />
+    a. If your Python 3 download's environment variable on your machine is python3, type the following into your terminal:<br />
+      pip3 install pygame<br />
+    b. If your Python 3 download's environment variable on your machine is python, type the following into your terminal:<br />
+      pip install pygame<br />
+```
+* [Python 3](https://www.python.org/downloads/)
+* [Installing pip](https://pip.pypa.io/en/stable/installing/)
+
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running
