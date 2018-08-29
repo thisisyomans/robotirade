@@ -16,6 +16,7 @@ badtimer = 100
 badtimer1 = 0
 badguys = [[-35, 100]]
 healthvalue = 194
+dead = False
 
 player = pygame.image.load('resources/PNG/Soldier1/soldier1_gun.png')
 grass = pygame.image.load('resources/PNG/Tiles/tile_01.png')
@@ -31,7 +32,7 @@ gameover = pygame.image.load("resources/images/gameover.png")
 youwin = pygame.image.load("resources/images/youwin.png")
 
 while 1:
-    exitcode = 1
+    #exitcode = 1
     badtimer -= 1
 
     screen.fill(0)
@@ -151,13 +152,14 @@ while 1:
         playerpos[0] += 5
 
     if healthvalue <= 0:
-        exitcode = 0
+        #exitcode = 0
+        dead = True
     if acc[1] != 0:
         accuracy = acc[0] * 1.0 / acc[1] * 100
     else:
         accuracy = 0
 
-    if exitcode == 0:
+    if dead == True:
         pygame.font.init()
         font = pygame.font.Font(None, 24)
         text = font.render("Accuracy: " + str(accuracy) + "%", True, (255, 0, 0))
@@ -167,9 +169,9 @@ while 1:
         screen.blit(gameover, (0, 0))
         screen.blit(text, textRect)
 
-    while 1:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                exit(0)
-        pygame.display.flip()
+    #while 1:
+    #    for event in pygame.event.get():
+    #        if event.type == pygame.QUIT:
+    #            pygame.quit()
+    #            exit(0)
+    #    pygame.display.flip()

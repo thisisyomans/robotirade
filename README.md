@@ -6,11 +6,18 @@ This is a top down, 2D shooter game made with Pygame. In time, it will be availa
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites (and their installation)
+### Prerequisites (for playing the game)
 
-What things you need to install the software and how to install them
+```
+None!
+```
+This is meant to be a game that anyone on any system can play!
+If your operating system's designated download doesn't work, or doesn't exist, contact one of our developers (their Github accounts are below, and their email addresses should be on their profiles).
 
-Coming soon!
+### Prerequisites (for messing with the code)
+
+What things you need to install/mess with the software and how to install them
+
 
 ```
 Python 3 (Python is a programming language, and this game is written in version 3) - It can be downloaded from its official website (listed below)
