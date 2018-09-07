@@ -17,6 +17,7 @@ badtimer1 = 0
 badguys = [[-35, 100]]
 healthvalue = 194
 dead = False
+gamestatus = "game"
 
 player = pygame.image.load('resources/PNG/Soldier1/soldier1_gun.png')
 grass = pygame.image.load('resources/PNG/Tiles/tile_01.png')
