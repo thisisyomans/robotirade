@@ -1,8 +1,5 @@
-import pygame
+import pygame, math, time, random
 from pygame.locals import *
-import math
-import time
-import random
 
 pygame.init()
 width, height = 640, 480
@@ -16,7 +13,7 @@ badtimer = 100
 badtimer1 = 0
 badguys = [[-35, 100]]
 healthvalue = 194
-dead = False
+pygame.mixer.init()
 
 player = pygame.image.load('resources/PNG/Soldier1/soldier1_gun.png')
 grass = pygame.image.load('resources/PNG/Tiles/tile_01.png')
@@ -31,19 +28,29 @@ health = pygame.image.load("resources/images/health.png")
 gameover = pygame.image.load("resources/images/gameover.png")
 youwin = pygame.image.load("resources/images/youwin.png")
 
-while 1:
-    #exitcode = 1
-    badtimer -= 1
+hit = pygame.mixer.Sound("resources/audio/explode.wav")
+enemy = pygame.mixer.Sound("resources/audio/enemy.wav")
+shoot = pygame.mixer.Sound("resources/audio/shoot.wav")
+hit.set_volume(0.05)
+enemy.set_volume(0.05)
+shoot.set_volume(0.05)
+pygame.mixer.music.load("resources/audio/moonlight.wav")
+pygame.mixer.music.play(-1, 0.0)
+pygame.mixer.music.set_volume(0.25)
 
+running = 1
+exitcode = 0
+while running:
+    badtimer -= 1
     screen.fill(0)
     for x in range(width//grass.get_width() + 1):
-        for y in range(height//grass.get_height() + 1):
-            screen.blit(grass,(x * 60, y * 60))
+            for y in range(height//grass.get_height() + 1):
+                screen.blit(grass,(x * 60, y * 60))
     screen.blit(pygame.transform.flip(castle, True, False), (531, 30))
     screen.blit(pygame.transform.flip(castle, True, False), (531, 135))
     screen.blit(pygame.transform.flip(castle, True, False), (531, 240))
     screen.blit(pygame.transform.flip(castle, True, False), (531, 345))
-
+    
     position = pygame.mouse.get_pos()
     angle = math.atan2(position[1] - (playerpos[1] + 32), position[0] - (playerpos[0] + 26))
     playerrot = pygame.transform.rotate(player, 360-angle * (360 / (2 * pi)))
@@ -79,6 +86,7 @@ while 1:
         badrect.top = badguy[1]
         badrect.right = badguy[0]
         if badrect.right > 531:
+            hit.play()
             healthvalue -= random.randint(5, 20)
             print(healthvalue)
             badguys.pop(index)
@@ -128,6 +136,7 @@ while 1:
                 keys[3] = True
 
             if event.key == K_SPACE:
+                shoot.play()
                 position = pygame.mouse.get_pos()
                 acc[1] += 1
                 arrows.append([math.atan2(position[1] - (playerpos1[1] + 32), position[0] - (playerpos1[0] + 26)), playerpos1[0] + 32, playerpos1[1] + 32])
@@ -152,26 +161,41 @@ while 1:
         playerpos[0] += 5
 
     if healthvalue <= 0:
-        #exitcode = 0
-        dead = True
+        gamestatus = False
+        running = 0
+        exitcode = 0
     if acc[1] != 0:
         accuracy = acc[0] * 1.0 / acc[1] * 100
     else:
         accuracy = 0
 
-    if dead == True:
-        pygame.font.init()
-        font = pygame.font.Font(None, 24)
-        text = font.render("Accuracy: " + str(accuracy) + "%", True, (255, 0, 0))
-        textRect = text.get_rect()
-        textRect.centerx = screen.get_rect().centerx
-        textRect.centery = screen.get_rect().centery + 24
-        screen.blit(gameover, (0, 0))
-        screen.blit(text, textRect)
-
-    #while 1:
-    #    for event in pygame.event.get():
-    #        if event.type == pygame.QUIT:
-    #            pygame.quit()
-    #            exit(0)
-    #    pygame.display.flip()
+if exitcode == 0:
+    pygame.font.init()
+    font = pygame.font.Font(None, 24)
+    text = font.render("Accuracy: " + str(accuracy) + "%", True, (255, 0, 0))
+    textRect = text.get_rect()
+    textRect.centerx = screen.get_rect().centerx
+    textRect.centery = screen.get_rect().centery + 24
+    screen.blit(gameover, (0, 0))
+    screen.blit(text, textRect)
+else:
+    pygame.font.init()
+    font = pygame.font.Font(None, 24)
+    text = font.render("Accuracy: " + str(accuracy) + "%", True, (0, 255, 0))
+    textRect = text.get_rect()
+    textRect.centerx = screen.get_rect().centerx
+    textRect.centery = screen.get_rect().centery + 24
+    screen.blit(youwin, (0, 0))
+    screen.blit(text, textRect)
+while 1:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            exit(0)
+        if event.type == pygame.KEYDOWN:
+            if event.key == K_q:
+                pygame.quit()
+                exit(0)
+            if event.key == K_r:
+                running = 1
+    pygame.display.flip()
