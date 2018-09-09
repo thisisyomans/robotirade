@@ -30,6 +30,26 @@ health = pygame.image.load("resources/images/health.png")
 gameover = pygame.image.load("resources/images/gameover.png")
 youwin = pygame.image.load("resources/images/youwin.png")
 
+class EndingScreen():
+    screen.fill((255, 0, 0))
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            exit(0)
+        if event.type == pygame.KEYDOWN:
+            if event.key == K_q:
+                pygame.quit()
+                exit(0)
+    #screen.fill(0)
+    #pygame.font.init()
+    #font = pygame.font.Font(None, 24)
+    #text = font.render("Accuracy: " + str(accuracy) + "%", True, (255, 0, 0))
+    #textRect = text.get_rect()
+    #textRect.centerx = screen.get_rect().centerx
+    #textRect.centery = screen.get_rect().centery + 24
+    #screen.blit(gameover, (0, 0))
+    #screen.blit(text, textRect)
+
 class GamePlay():
     while 1:
         #exitcode = 1
@@ -156,6 +176,7 @@ class GamePlay():
             dead = True
             print("hello ladies")
             gamestatus = 1
+            EndingScreen()
             break
         if acc[1] != 0:
             accuracy = acc[0] * 1.0 / acc[1] * 100
@@ -165,30 +186,16 @@ class GamePlay():
         #if dead == True:
         #    gamestatus = 1
 
-class EndingScreen():
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()
-            exit(0)
-        if event.type == pygame.KEYDOWN:
-            if event.key == K_q:
-                pygame.quit()
-                exit(0)
-    screen.fill(0)
-    #pygame.font.init()
-    #font = pygame.font.Font(None, 24)
-    #text = font.render("Accuracy: " + str(accuracy) + "%", True, (255, 0, 0))
-    #textRect = text.get_rect()
-    #textRect.centerx = screen.get_rect().centerx
-    #textRect.centery = screen.get_rect().centery + 24
-    #screen.blit(gameover, (0, 0))
-    #screen.blit(text, textRect)
-
 while True:
-    if gamestatus == 0:
-        GamePlay();
-    elif gamestatus == 1:
+    if gamestatus == 1:
         EndingScreen()
+        print("we made it")
+    elif gamestatus == 0:
+        GamePlay()
+    else:
+        print("Somebody decided to fuck with the gamestatus, therefore also fucking your game experience. We apologize.")
+    #elif gamestatus == 0:
+        #GamePlay()
 
         #while 1:
         #    for event in pygame.event.get():
