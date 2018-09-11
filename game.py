@@ -9,16 +9,16 @@ playerpos = [300, 240]
 pi = math.pi
 acc = [0, 0]
 arrows = []
-badtimer = 100
-badtimer1 = 0
+timerevil = 100
+timerevil1 = 0
 badguys = [[-35, 100]]
 healthvalue = 194
 pygame.mixer.init()
 
 player = pygame.image.load('resources/PNG/Soldier1/soldier1_gun.png')
 grass = pygame.image.load('resources/PNG/Tiles/tile_01.png')
-castle1 = pygame.image.load('resources/PNG/towerDefense_tile205.png')
-castle = pygame.transform.rotate(castle1, -90)
+tower1 = pygame.image.load('resources/PNG/towerDefense_tile205.png')
+tower = pygame.transform.rotate(tower1, -90)
 arrow1 = pygame.image.load('resources/PNG/Tiles/tile_533.png')
 arrow = pygame.transform.scale(arrow1, (32, 32))
 badguyimg1 = pygame.image.load('resources/PNG/Robot1/robot1_hold.png')
@@ -41,15 +41,15 @@ pygame.mixer.music.set_volume(0.25)
 running = 1
 exitcode = 0
 while running:
-    badtimer -= 1
+    timerevil -= 1
     screen.fill(0)
     for x in range(width//grass.get_width() + 1):
             for y in range(height//grass.get_height() + 1):
                 screen.blit(grass,(x * 60, y * 60))
-    screen.blit(pygame.transform.flip(castle, True, False), (531, 30))
-    screen.blit(pygame.transform.flip(castle, True, False), (531, 135))
-    screen.blit(pygame.transform.flip(castle, True, False), (531, 240))
-    screen.blit(pygame.transform.flip(castle, True, False), (531, 345))
+    screen.blit(pygame.transform.flip(tower, True, False), (531, 30))
+    screen.blit(pygame.transform.flip(tower, True, False), (531, 135))
+    screen.blit(pygame.transform.flip(tower, True, False), (531, 240))
+    screen.blit(pygame.transform.flip(tower, True, False), (531, 345))
     
     position = pygame.mouse.get_pos()
     angle = math.atan2(position[1] - (playerpos[1] + 32), position[0] - (playerpos[0] + 26))
@@ -70,13 +70,13 @@ while running:
             arrow1 = pygame.transform.rotate(arrow, 360 - projectile[0] * 57.29)
             screen.blit(arrow1, (projectile[1], projectile[2]))
 
-    if badtimer == 0:
+    if timerevil == 0:
         badguys.append([-35, random.randint(50, 430)])
-        badtimer = 100 - (badtimer1 * 2)
-        if badtimer1 >= 35:
-            badtimer1 = 35
+        timerevil = 100 - (timerevil1 * 2)
+        if timerevil1 >= 35:
+            timerevil1 = 35
         else:
-            badtimer1 += 5
+            timerevil1 += 5
     index = 0
     for badguy in badguys:
         if badguy[0] > 640:
