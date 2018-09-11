@@ -2,6 +2,11 @@
 
 This is a top down, 2D shooter game made with Pygame. In time, it will be available as a downloadable application.
 
+## How To Play
+
+W - move character upwards
+A - move character to left
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
