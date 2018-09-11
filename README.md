@@ -39,6 +39,21 @@ Steps:
 * [Pygame](www.pygame.org)
 * [Installing pip](https://pip.pypa.io/en/stable/installing/)
 
+```
+PyInstaller is a python library used for packaging python scripts as applications/executables.
+Note: the following steps will add the PyInstaller module to your project directory, not your globally on your machine.
+Steps:
+  1. We're assuming you have pip, as the up to date versions of Python 2 and 3 come with pip, if you don't, a link to the pip website that has instructions will be listed below.
+  2. Navigate to your project directory through the command line.
+  3. Once you are in your project directory, do one of the following:
+    a. If your Python 3 download's environment variable on your machine is python3, type the following into your terminal:
+      pip3 install pyinstaller
+    b. If your Python 3 download's environment variable on your machine is python, type the following into your terminal:
+      pip install pyinstaller
+```
+* [PyInstaller](http://www.pyinstaller.org/)
+* [Installing pip](https://pip.pypa.io/en/stable/installing/)
+
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running
