@@ -11,7 +11,7 @@ acc = [0, 0]
 arrows = []
 timerevil = 100
 timerevil1 = 0
-badguys = [[-35, 100]]
+evildudes = [[-35, 100]]
 healthvalue = 194
 pygame.mixer.init()
 
@@ -50,7 +50,7 @@ while running:
     screen.blit(pygame.transform.flip(tower, True, False), (531, 135))
     screen.blit(pygame.transform.flip(tower, True, False), (531, 240))
     screen.blit(pygame.transform.flip(tower, True, False), (531, 345))
-    
+
     position = pygame.mouse.get_pos()
     angle = math.atan2(position[1] - (playerpos[1] + 32), position[0] - (playerpos[0] + 26))
     playerrot = pygame.transform.rotate(player, 360-angle * (360 / (2 * pi)))
@@ -71,16 +71,16 @@ while running:
             screen.blit(arrow1, (projectile[1], projectile[2]))
 
     if timerevil == 0:
-        badguys.append([-35, random.randint(50, 430)])
+        evildudes.append([-35, random.randint(50, 430)])
         timerevil = 100 - (timerevil1 * 2)
         if timerevil1 >= 35:
             timerevil1 = 35
         else:
             timerevil1 += 5
     index = 0
-    for badguy in badguys:
+    for badguy in evildudes:
         if badguy[0] > 640:
-            badguys.pop(index)
+            evildudes.pop(index)
         badguy[0] += 7
         badrect = pygame.Rect(badguyimg.get_rect())
         badrect.top = badguy[1]
@@ -89,7 +89,7 @@ while running:
             hit.play()
             healthvalue -= random.randint(5, 20)
             print(healthvalue)
-            badguys.pop(index)
+            evildudes.pop(index)
         index1 = 0
         for bullet in arrows:
             bullrect = pygame.Rect(arrow.get_rect())
@@ -97,11 +97,11 @@ while running:
             bullrect.top = bullet[2]
             if badrect.colliderect(bullrect):
                 acc[0] += 1
-                badguys.pop(index)
+                evildudes.pop(index)
                 arrows.pop(index1)
             index1 += 1
         index += 1
-    for badguy in badguys:
+    for badguy in evildudes:
         screen.blit(badguyimg, badguy)
 
     #font = pygame.font.Font(None, 24)
