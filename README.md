@@ -11,17 +11,11 @@ D - move character (soldier) to right
 Space - shoot missiles
 Mouse - character will shoot missiles in direction of mouse (it acts as your aiming tool)
 
-## Getting Started
+## How To Download
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Coming soon!
 
-### Prerequisites (for playing the game)
-
-```
-None!
-```
-This is meant to be a game that anyone on any system can play!
-If your operating system's designated download doesn't work, or doesn't exist, contact one of our developers (their Github accounts are below, and their email addresses should be on their profiles).
+## Getting Started (for developers)
 
 ### Prerequisites (for messing with the code)
 
