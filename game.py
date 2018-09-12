@@ -1,7 +1,8 @@
 import pygame, math, time, random
 from pygame.locals import *
 
-##QUICK NOTE: some of the code contains features that haven't been fully implemented
+##QUICK NOTE: some of the code contains features that haven't been fully implemented,
+##so you will find code that currently might have no affect on the game whatsoever
 
 pygame.init()
 width, height = 640, 480
