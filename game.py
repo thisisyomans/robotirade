@@ -1,6 +1,8 @@
 import pygame, math, time, random
 from pygame.locals import *
 
+##QUICK NOTE: some of the code contains features that haven't been fully implemented
+
 pygame.init()
 width, height = 640, 480
 screen = pygame.display.set_mode((width, height))
