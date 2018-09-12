@@ -4,12 +4,12 @@ This is a top down, 2D shooter game made with Pygame. In time, it will be availa
 
 ## How To Play
 
-W - move character (soldier) upwards
-A - move character (soldier) to left
-S - move character (soldier) downwards
-D - move character (soldier) to right
-Space - shoot missiles
-Mouse - character will shoot missiles in direction of mouse (it acts as your aiming tool)
+W - move character (soldier) upwards\
+A - move character (soldier) to left\
+S - move character (soldier) downwards\
+D - move character (soldier) to right\
+Space - shoot missiles\
+Mouse - character will shoot missiles in direction of mouse (it acts as your aiming tool)\
 
 ## How To Download
 
