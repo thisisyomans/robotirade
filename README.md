@@ -9,7 +9,7 @@ A - move character (soldier) to left\
 S - move character (soldier) downwards\
 D - move character (soldier) to right\
 Space - shoot missiles\
-Mouse - character will shoot missiles in direction of mouse (it acts as your aiming tool)\
+Mouse - character will shoot missiles in direction of mouse (it acts as your aiming tool)
 
 ## How To Download
 
