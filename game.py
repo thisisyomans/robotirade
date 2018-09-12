@@ -104,6 +104,8 @@ while running:
     for badguy in evildudes:
         screen.blit(enemyimage, badguy)
 
+#Originally you could actually win the game, so this commented out timer applies to that
+#Game mechanic/purpose of timer: if you live long enough, you win!
     #font = pygame.font.Font(None, 24)
     #survivedtext = font.render(str((90000 - pygame.time.get_ticks())/60000) + ':' + str((90000 - pygame.time.get_ticks())/1000%60).zfill(2), True, (0, 0, 0))
     #textRect = survivedtext.get_rect()
