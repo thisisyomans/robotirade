@@ -23,11 +23,14 @@ If your operating system's designated download doesn't work, or doesn't exist, c
 
 What things you need to install/mess with the software and how to install them
 
+#### Python 3
 
 ```
 Python 3 (Python is a programming language, and this game is written in version 3) - It can be downloaded from its official website (listed below)
 ```
 * [Python 3](https://www.python.org/downloads/)
+
+#### Pygame
 
 ```
 Pygame is a python library meant for game development.
@@ -43,6 +46,8 @@ Steps:
 ```
 * [Pygame](www.pygame.org)
 * [Installing pip](https://pip.pypa.io/en/stable/installing/)
+
+#### PyInstaller
 
 ```
 PyInstaller is a python library used for packaging python scripts as applications/executables.
