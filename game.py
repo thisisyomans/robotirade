@@ -28,10 +28,10 @@ health = pygame.image.load("resources/images/health.png")
 gameover = pygame.image.load("resources/images/gameover.png")
 youwin = pygame.image.load("resources/images/youwin.png")
 
-hit = pygame.mixer.Sound("resources/audio/explode.wav")
+towerhit = pygame.mixer.Sound("resources/audio/explode.wav")
 enemy = pygame.mixer.Sound("resources/audio/enemy.wav")
 shoot = pygame.mixer.Sound("resources/audio/shoot.wav")
-hit.set_volume(0.05)
+towerhit.set_volume(0.05)
 enemy.set_volume(0.05)
 shoot.set_volume(0.05)
 pygame.mixer.music.load("resources/audio/moonlight.wav")
@@ -86,7 +86,7 @@ while running:
         badrect.top = badguy[1]
         badrect.right = badguy[0]
         if badrect.right > 531:
-            hit.play()
+            towerhit.play()
             healthvalue -= random.randint(5, 20)
             print(healthvalue)
             evildudes.pop(index)
