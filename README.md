@@ -14,13 +14,15 @@ Q - press 'Q' at any time to quit the game (or click the 'x' in the top left cor
 
 ## How To Download
 
-Coming soon!
+Go to the website to download a playabe version of the game: Coming Soon!
 
 ## Getting Started (for developers)
 
-### Prerequisites (for messing with the code)
+### Prerequisites/Development Environment (for messing with the code)
 
-What things you need to install/mess with the software and how to install them
+What things you need to install/mess with the software and how to install them.
+The easiest way to go about this is to clone the repository from here (or from your\
+own fork) and set up the following things within the directory created from the clone.
 
 #### Python 3
 
