@@ -109,7 +109,9 @@ Coming soon!
 
 ## Built With
 
-* [Pygame](www.pygame.org) - Set of python modules used
+* [Python 3](https://www.python.org/downloads/) - Programming language used to develop the game
+* [Pygame](www.pygame.org) - Python module used for sprite handling, images, audio, etc
+* [PyInstaller](http://www.pyinstaller.org/) - Python module used for packaging the game
 
 ## Contributing
 
