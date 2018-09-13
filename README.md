@@ -1,4 +1,4 @@
-# Project Title
+# RoboTirade
 
 This is a top down, 2D shooter game made with Pygame. In time, it will be available as a downloadable application.
 
