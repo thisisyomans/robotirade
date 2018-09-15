@@ -5,6 +5,7 @@ from pygame.locals import *
 ##so you will find code that currently might have no affect on the game whatsoever
 
 pygame.init()
+pygame.display.set_caption('RoboTirade')
 width, height = 640, 480
 screen = pygame.display.set_mode((width, height))
 keys = [False, False, False, False]
