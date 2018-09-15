@@ -23,26 +23,51 @@ def resource_path(relative):
 		return os.path.join(sys._MEIPASS, relative)
 	return os.path.join(relative)
 
-player = pygame.image.load(resource_path(os.path.join('resources', 'PNG/Soldier1/soldier1_gun.png')))
-grass = pygame.image.load(resource_path(os.path.join('resources', 'PNG/Tiles/tile_01.png')))
-tower1 = pygame.image.load(resource_path(os.path.join('resources', 'PNG/towerDefense_tile205.png')))
-tower = pygame.transform.rotate(tower1, -90)
-missile1 = pygame.image.load(resource_path(os.path.join('resources', 'PNG/Tiles/tile_533.png')))
-missile = pygame.transform.scale(missile1, (32, 32))
-enemyimage1 = pygame.image.load(resource_path(os.path.join('resources', 'PNG/Robot1/robot1_hold.png')))
-enemyimage = enemyimage1
-healthbar = pygame.image.load(resource_path(os.path.join('resources', 'images/healthbar.png')))
-health = pygame.image.load(resource_path(os.path.join('resources', 'images/health.png')))
-gameover = pygame.image.load(resource_path(os.path.join('resources', 'images/gameover.png')))
-youwin = pygame.image.load(resource_path(os.path.join('resources', 'images/youwin.png')))
+#NOTE: original resources
+#player = pygame.image.load(resource_path(os.path.join('resources', 'PNG/Soldier1/soldier1_gun.png')))
+#grass = pygame.image.load(resource_path(os.path.join('resources', 'PNG/Tiles/tile_01.png')))
+#tower1 = pygame.image.load(resource_path(os.path.join('resources', 'PNG/towerDefense_tile205.png')))
+#tower = pygame.transform.rotate(tower1, -90)
+#missile1 = pygame.image.load(resource_path(os.path.join('resources', 'PNG/Tiles/tile_533.png')))
+#missile = pygame.transform.scale(missile1, (32, 32))
+#enemyimage1 = pygame.image.load(resource_path(os.path.join('resources', 'PNG/Robot1/robot1_hold.png')))
+#enemyimage = enemyimage1
+#healthbar = pygame.image.load(resource_path(os.path.join('resources', 'images/healthbar.png')))
+#health = pygame.image.load(resource_path(os.path.join('resources', 'images/health.png')))
+#gameover = pygame.image.load(resource_path(os.path.join('resources', 'images/gameover.png')))
+#youwin = pygame.image.load(resource_path(os.path.join('resources', 'images/youwin.png')))
 
-towerhit = pygame.mixer.Sound(resource_path(os.path.join('resources', 'audio/explode.wav')))
-enemy = pygame.mixer.Sound(resource_path(os.path.join('resources', 'audio/enemy.wav')))
-shoot = pygame.mixer.Sound(resource_path(os.path.join('resources', 'audio/shoot.wav')))
+#towerhit = pygame.mixer.Sound(resource_path(os.path.join('resources', 'audio/explode.wav')))
+#enemy = pygame.mixer.Sound(resource_path(os.path.join('resources', 'audio/enemy.wav')))
+#shoot = pygame.mixer.Sound(resource_path(os.path.join('resources', 'audio/shoot.wav')))
+#towerhit.set_volume(0.05)
+#enemy.set_volume(0.05)
+#shoot.set_volume(0.05)
+#pygame.mixer.music.load(resource_path(os.path.join('resources', 'audio/moonlight.wav'))) ###NOTE: needs to be changed
+#pygame.mixer.music.play(-1, 0.0)
+#pygame.mixer.music.set_volume(0.25)
+
+#NOTE: new resources
+player = pygame.image.load(resource_path(os.path.join('resources2', 'soldier1_gun.png')))
+grass = pygame.image.load(resource_path(os.path.join('resources2', 'tile_01.png')))
+tower1 = pygame.image.load(resource_path(os.path.join('resources2', 'towerDefense_tile205.png')))
+tower = pygame.transform.rotate(tower1, -90)
+missile1 = pygame.image.load(resource_path(os.path.join('resources2', 'tile_533.png')))
+missile = pygame.transform.scale(missile1, (32, 32))
+enemyimage1 = pygame.image.load(resource_path(os.path.join('resources2', 'robot1_hold.png')))
+enemyimage = enemyimage1
+healthbar = pygame.image.load(resource_path(os.path.join('resources2', 'healthbar.png')))
+health = pygame.image.load(resource_path(os.path.join('resources2', 'health.png')))
+gameover = pygame.image.load(resource_path(os.path.join('resources2', 'gameover.png')))
+youwin = pygame.image.load(resource_path(os.path.join('resources2', 'youwin.png')))
+
+towerhit = pygame.mixer.Sound(resource_path(os.path.join('resources2', 'explode.wav')))
+enemy = pygame.mixer.Sound(resource_path(os.path.join('resources2', 'enemy.wav')))
+shoot = pygame.mixer.Sound(resource_path(os.path.join('resources2', 'shoot.wav')))
 towerhit.set_volume(0.05)
 enemy.set_volume(0.05)
 shoot.set_volume(0.05)
-pygame.mixer.music.load(resource_path(os.path.join('resources', 'audio/moonlight.wav'))) ###NOTE: needs to be changed
+pygame.mixer.music.load(resource_path(os.path.join('resources2', 'moonlight.wav'))) ###NOTE: needs to be changed
 pygame.mixer.music.play(-1, 0.0)
 pygame.mixer.music.set_volume(0.25)
 
@@ -96,7 +121,7 @@ while running:
         if badrect.right > 531:
             towerhit.play()
             healthvalue -= random.randint(5, 20)
-            print(healthvalue)
+            #print(healthvalue)
             evildudes.pop(index)
         index1 = 0
         for bullet in missiles:
@@ -181,7 +206,7 @@ while running:
 
 if exitcode == 0:
     pygame.font.init()
-    font = pygame.font.Font(None, 24)
+    font = pygame.font.Font(resource_path(os.path.join('resources2', 'freesansbold.ttf')), 24)
     text = font.render("Accuracy: " + str(accuracy) + "%", True, (255, 0, 0))
     textRect = text.get_rect()
     textRect.centerx = screen.get_rect().centerx
@@ -190,7 +215,7 @@ if exitcode == 0:
     screen.blit(text, textRect)
 else:
     pygame.font.init()
-    font = pygame.font.Font(None, 24)
+    font = pygame.font.Font(resource_path(os.path.join('resources2', 'freesansbold.ttf')), 24)
     text = font.render("Accuracy: " + str(accuracy) + "%", True, (0, 255, 0))
     textRect = text.get_rect()
     textRect.centerx = screen.get_rect().centerx
