@@ -72,7 +72,7 @@ This is basically just an example of what was in prerequisites
 
 Note: Install Python 3 before doing any of this (makes life easy)
 
-####Case 1: Python 3 Environment Variable is python
+#### Case 1: Python 3 Environment Variable is python
 Setting up the environment:
 ```
 git clone https://github.com/username/repositoryname.git
@@ -84,7 +84,7 @@ Running the game:
 python game.py
 ```
 
-####Case 2: Python 3 Environment Variable is python3
+#### Case 2: Python 3 Environment Variable is python3
 Setting up the environment:
 ```
 git clone https://github.com/username/repositoryname.git
