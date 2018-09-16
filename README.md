@@ -67,8 +67,8 @@ Steps:
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running\
-This is basically just an example of what was in prerequisites
+A step by step series of examples that tell you how to get a development env running.\
+This is basically just an example of what was in prerequisites.
 
 Note: Install Python 3 before doing any of this (makes life easy)
 
