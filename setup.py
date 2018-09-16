@@ -1,3 +1,4 @@
+#NOTE: this is an unused file that was originally meant for packaging with cx_Freeze
 import cx_Freeze
 
 executables = [cx_Freeze.Executable("game.py")]
