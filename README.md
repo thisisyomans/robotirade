@@ -67,21 +67,34 @@ Steps:
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+A step by step series of examples that tell you how to get a development env running\
+This is basically just an example of what was in prerequisites
 
-Coming soon!
+Note: Install Python 3 before doing any of this (makes life easy)
 
+####Case 1: Python 3 Environment Variable is python
+Setting up the environment:
 ```
-Give the example
+git clone https://github.com/username/repositoryname.git
+pip install pygame
+pip install pyinstaller
+```
+Running the game:
+```
+python game.py
 ```
 
-And repeat
-
+####Case 2: Python 3 Environment Variable is python3
+Setting up the environment:
 ```
-until finished
+git clone https://github.com/username/repositoryname.git
+pip3 install pygame
+pip3 install pyinstaller
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
+Running the game:
+```
+python3 game.py
+```
 
 ## Running the tests
 
@@ -105,7 +118,7 @@ Give an example
 
 ## Deployment
 
-Coming soon!
+Coming soon! (This section will be on how the scripts were packaged into applications)
 
 ## Built With
 
