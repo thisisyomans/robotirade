@@ -4,7 +4,7 @@ This is a top down, 2D shooter game made with Pygame.\
 The downloads for Mac and Windows are ready, and will be available\
 on the website (whenever that is ready).
 
-Mac: opens up the game window
+Mac: opens up the game window\
 Windows: opens up the game windows + a terminal (just leave it open,\
 it makes it easier for Windows)
 
