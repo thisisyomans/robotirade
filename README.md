@@ -154,4 +154,4 @@ We use [Git](https://git-scm.com/) and [Github](https://github.com) for versioni
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
-[comment]: # maybe add acknowledgements if contributors are added
+[](maybe add acknowledgements if contributors are added)
