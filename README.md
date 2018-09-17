@@ -5,10 +5,10 @@ The downloads for Mac and Windows are ready, and will be available\
 on the website (whenever that is ready).
 
 Mac: opens up the game window\
-Windows: opens up the game windows + a terminal (just leave it open,\
+Windows: opens up the game windows + a terminal (just leave it open,
 it makes it easier for Windows)
 
-The game may not run smoothly the first time around, because PyInstaller\
+The game may not run smoothly the first time around, because PyInstaller
 is nobody's best friend.
 
 ## How To Play
