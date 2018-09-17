@@ -4,6 +4,13 @@ This is a top down, 2D shooter game made with Pygame.\
 The downloads for Mac and Windows are ready, and will be available\
 on the website (whenever that is ready).
 
+Mac: opens up the game window
+Windows: opens up the game windows + a terminal (just leave it open,\
+it makes it easier for Windows)
+
+The game may not run smoothly the first time around, because PyInstaller\
+is nobody's best friend.
+
 ## How To Play
 
 W - move character (soldier) upwards\
@@ -17,6 +24,7 @@ Q - press 'Q' at any time to quit the game (or click the 'x' in the top left cor
 ## How To Download
 
 Go to the website to download a playabe version of the game: Coming Soon!
+Both are compressed as zips, so be sure to uncompress them to get the application.
 
 ## Getting Started (for developers)
 
