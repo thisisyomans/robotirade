@@ -19,7 +19,9 @@ S - move character (soldier) downwards\
 D - move character (soldier) to right\
 Space - shoot missiles\
 Mouse - character will shoot missiles in direction of mouse (it acts as your aiming tool)\
-Q - press 'Q' at any time to quit the game (or click the 'x' in the top left corner)
+Q - press 'Q' at any time to quit the game (or click the 'x' in the top left corner)\
+\
+Note: press 'Q' if you end up losing, restart feature will be added soon!
 
 ## How To Download
 
