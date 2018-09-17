@@ -79,7 +79,7 @@ Steps:
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running.\
+A step by step series of examples that tell you how to get a development environment running.\
 This is basically just an example of what was in prerequisites.
 
 Note: Install Python 3 before doing any of this (makes life easy)
@@ -154,8 +154,4 @@ We use [Git](https://git-scm.com/) and [Github](https://github.com) for versioni
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+[comment]: # maybe add acknowledgements if contributors are added
