@@ -1,6 +1,8 @@
 # RoboTirade
 
-This is a top down, 2D shooter game made with Pygame. In time, it will be available as a downloadable application.
+This is a top down, 2D shooter game made with Pygame.\
+The downloads for Mac and Windows are ready, and will be available\
+on the website (whenever that is ready).
 
 ## How To Play
 
@@ -96,27 +98,27 @@ Running the game:
 python3 game.py
 ```
 
-## Running the tests
+### Running the tests
 
 Coming soon!
 
-### Break down into end to end tests
-
-Coming soon!
-
-```
-Give an example
-```
-
-### And coding style tests
+#### Break down into end to end tests
 
 Coming soon!
 
 ```
-Give an example
+Coming Soon!
 ```
 
-## Deployment
+#### And coding style tests
+
+Coming soon!
+
+```
+Coming Soon!
+```
+
+### Deployment
 
 Coming soon! (This section will be on how the scripts were packaged into applications)
 
