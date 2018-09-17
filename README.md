@@ -1,14 +1,14 @@
 # RoboTirade
 
 This is a top down, 2D shooter game made with Pygame.\
-The downloads for Mac and Windows are ready, and will be available\
+The downloads for Mac and Windows are ready, and will be available
 on the website (whenever that is ready).
 
 Mac: opens up the game window\
 Windows: opens up the game windows + a terminal (just leave it open,
 it makes it easier for Windows)
 
-The game may not run smoothly the first time around, because PyInstaller
+NOTE: The game **may not** run smoothly the first time around, because PyInstaller
 is nobody's best friend.
 
 ## How To Play
@@ -21,7 +21,7 @@ Space - shoot missiles\
 Mouse - character will shoot missiles in direction of mouse (it acts as your aiming tool)\
 Q - press 'Q' at any time to quit the game (or click the 'x' in the top left corner)\
 \
-Note: press 'Q' if you end up losing, restart feature will be added soon!
+NOTE: press 'Q' if you end up losing, restart feature will be added soon!
 
 ## How To Download
 
