@@ -23,7 +23,7 @@ Q - press 'Q' at any time to quit the game (or click the 'x' in the top left cor
 
 ## How To Download
 
-Go to the website to download a playabe version of the game: Coming Soon!
+Go to the website to download a playabe version of the game: Coming Soon!\
 Both are compressed as zips, so be sure to uncompress them to get the application.
 
 ## Getting Started (for developers)
