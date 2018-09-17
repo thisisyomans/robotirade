@@ -9,7 +9,7 @@ Windows: opens up the game windows + a terminal (just leave it open,
 it makes it easier for Windows)
 
 NOTE: This is mentioned again later, but the downloads will be zip files, as those
-are the only files that contained the propely packaged applications.
+are the only files that contain the propely packaged applications.
 
 NOTE: The game **may not** run smoothly the first time around, because PyInstaller
 is nobody's best friend.
@@ -35,7 +35,7 @@ Both are compressed as zips, so be sure to uncompress them to get the applicatio
 
 ### Prerequisites/Development Environment (for messing with the code)
 
-What things you need to install/mess with the software and how to install them.
+What things you need to mess with or install the software and how to install them.
 The easiest way to go about this is to clone the repository from here (or from your
 own fork) and set up the following things within the directory created from the clone.
 
@@ -143,7 +143,8 @@ Coming soon! (This section will be on how the scripts were packaged into applica
 
 ## Contributing
 
-We are currently not accepting contributions.
+* **Manas Taneja** - *Developer* - [thisisyomans](https://github.com/thisisyomans)
+* We are currently not accepting outside contributions.
 
 ## Versioning
 
