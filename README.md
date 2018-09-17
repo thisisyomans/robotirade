@@ -8,6 +8,9 @@ Mac: opens up the game window\
 Windows: opens up the game windows + a terminal (just leave it open,
 it makes it easier for Windows)
 
+NOTE: This is mentioned again later, but the downloads will be zip files, as those
+are the only files that contained the propely packaged applications.
+
 NOTE: The game **may not** run smoothly the first time around, because PyInstaller
 is nobody's best friend.
 
