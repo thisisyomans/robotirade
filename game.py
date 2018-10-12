@@ -4,6 +4,7 @@ from pygame.locals import *
 ##QUICK NOTE: some of the code contains features that haven't been fully implemented,
 ##so you will find code that currently might have no affect on the game whatsoever
 
+#initialize game, base vars + values needed for setup
 pygame.init()
 pygame.display.set_caption('RoboTirade')
 width, height = 640, 480
@@ -19,6 +20,7 @@ evildudes = [[-35, 100]]
 healthvalue = 194
 pygame.mixer.init()
 
+#this is just alternative way for referencing filepaths, makes packaging w/ PyInstaller easier
 def resource_path(relative):
 	if hasattr(sys, "_MEIPASS"):
 		return os.path.join(sys._MEIPASS, relative)
@@ -49,6 +51,7 @@ def resource_path(relative):
 #pygame.mixer.music.set_volume(0.25)
 
 #NOTE: new resources
+#image resources + small manipulations
 player = pygame.image.load(resource_path(os.path.join('resources2', 'soldier1_gun.png')))
 grass = pygame.image.load(resource_path(os.path.join('resources2', 'tile_01.png')))
 tower1 = pygame.image.load(resource_path(os.path.join('resources2', 'towerDefense_tile205.png')))
@@ -62,6 +65,7 @@ health = pygame.image.load(resource_path(os.path.join('resources2', 'health.png'
 gameover = pygame.image.load(resource_path(os.path.join('resources2', 'gameover.png')))
 youwin = pygame.image.load(resource_path(os.path.join('resources2', 'youwin.png')))
 
+#audio resources + small manipulations
 towerhit = pygame.mixer.Sound(resource_path(os.path.join('resources2', 'explode.wav')))
 enemy = pygame.mixer.Sound(resource_path(os.path.join('resources2', 'enemy.wav')))
 shoot = pygame.mixer.Sound(resource_path(os.path.join('resources2', 'shoot.wav')))
@@ -72,6 +76,8 @@ pygame.mixer.music.load(resource_path(os.path.join('resources2', 'moonlight.wav'
 pygame.mixer.music.play(-1, 0.0)
 pygame.mixer.music.set_volume(0.25)
 
+#running var is used for switching from infinite loop gamescreen to end screen
+#exitcode is used for deciding if the player won or lost, winning is currently not possible 
 running = 1
 exitcode = 0
 while running:
@@ -152,6 +158,7 @@ while running:
 
     pygame.display.flip()
 
+    #event handling: key downs and up
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
@@ -187,6 +194,7 @@ while running:
             if event.key == K_d:
                 keys[3] = False
 
+    #movement system based on event handling of keys + keys array + current player position
     if keys[0]:
         playerpos[1] -= 5
     elif keys[2]:
