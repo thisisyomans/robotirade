@@ -2,7 +2,7 @@
 
 This is a top down, 2D shooter game made with Pygame.\
 The downloads for Mac and Windows are ready, and will be available
-on the website (whenever that is ready).
+on the [website](https://thisisyomans.github.io/robotiradesite/).
 
 Mac: opens up the game window\
 Windows: opens up the game windows + a terminal (just leave it open,
@@ -28,14 +28,14 @@ NOTE: press 'Q' if you end up losing, restart feature will be added soon!
 
 ## How To Download
 
-Go to the website to download a playabe version of the game: Coming Soon!\
+Go to the [website](https://thisisyomans.github.io/robotiradesite/) to download a playabe version of the game.\
 Both are compressed as zips, so be sure to uncompress them to get the application.
 
 ## Getting Started (for developers)
 
 ### Prerequisites/Development Environment (for messing with the code)
 
-What things you need to mess with or install the software and how to install them.
+What things you need to mess with/install the software and how to install them.
 The easiest way to go about this is to clone the repository from here (or from your
 own fork) and set up the following things within the directory created from the clone.
 
@@ -55,9 +55,9 @@ Steps:
   1. We're assuming you have pip, as the up to date versions of Python 2 and 3 come with pip, if you don't, a link to the pip website that has instructions will be listed below.
   2. Navigate to your project directory through the command line.
   3. Once you are in your project directory, do one of the following:
-    a. If your Python 3 download's environment variable on your machine is python3, type the following into your terminal:
+    a. If your Python 3 download's PATH/environment variable on your machine is python3, type the following into your terminal:
       pip3 install pygame
-    b. If your Python 3 download's environment variable on your machine is python, type the following into your terminal:
+    b. If your Python 3 download's PATH/environment variable on your machine is python, type the following into your terminal:
       pip install pygame
 ```
 * [Pygame](www.pygame.org)
@@ -72,9 +72,9 @@ Steps:
   1. We're assuming you have pip, as the up to date versions of Python 2 and 3 come with pip, if you don't, a link to the pip website that has instructions will be listed below.
   2. Navigate to your project directory through the command line.
   3. Once you are in your project directory, do one of the following:
-    a. If your Python 3 download's environment variable on your machine is python3, type the following into your terminal:
+    a. If your Python 3 download's PATH/environment variable on your machine is python3, type the following into your terminal:
       pip3 install pyinstaller
-    b. If your Python 3 download's environment variable on your machine is python, type the following into your terminal:
+    b. If your Python 3 download's PATH/environment variable on your machine is python, type the following into your terminal:
       pip install pyinstaller
 ```
 * [PyInstaller](http://www.pyinstaller.org/)
@@ -87,7 +87,7 @@ This is basically just an example of what was in prerequisites.
 
 Note: Install Python 3 before doing any of this (makes life easy)
 
-#### Case 1: Python 3 Environment Variable is python
+#### Case 1: Python 3 PATH/Environment Variable is python
 Setting up the environment:
 ```
 git clone https://github.com/username/repositoryname.git
@@ -99,7 +99,7 @@ Running the game:
 python game.py
 ```
 
-#### Case 2: Python 3 Environment Variable is python3
+#### Case 2: Python 3 PATH/Environment Variable is python3
 Setting up the environment:
 ```
 git clone https://github.com/username/repositoryname.git
